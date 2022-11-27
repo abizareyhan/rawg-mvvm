@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivThumbnail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/color_DDDDDD"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="6:4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvName" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivThumbnail"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Marvel's Spider-Man: Miles Morales"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvReleaseDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/color_333333"
+        android:textSize="12sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Release Date: 12 Nov 2020"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivRating"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        app:srcCompat="@drawable/ic_rating"
+        app:layout_constraintTop_toBottomOf="@id/tvReleaseDate"
+        app:layout_constraintStart_toStartOf="@id/tvName"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/color_333333"
+        android:textSize="12sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        app:layout_constraintTop_toTopOf="@id/ivRating"
+        app:layout_constraintStart_toEndOf="@id/ivRating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/ivRating"
+        tools:text="4.5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
